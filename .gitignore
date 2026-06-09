@@ -2,6 +2,7 @@ node_modules/
 dist/
 work/
 outputs/
+.netlify/
 
 .DS_Store
 *.log
