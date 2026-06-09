@@ -1,0 +1,1004 @@
+:root {
+  color: #17201d;
+  background: #f4f7f6;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+.appShell {
+  display: grid;
+  grid-template-columns: 224px minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+.sideRail {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 24px 16px;
+  border-right: 1px solid #dce6e2;
+  background: #ffffff;
+}
+
+.brandMark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+}
+
+.brandIcon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #17201d;
+}
+
+.brandMark strong,
+.brandMark span {
+  display: block;
+}
+
+.brandMark strong {
+  font-size: 16px;
+}
+
+.brandMark span {
+  color: #63706c;
+  font-size: 13px;
+}
+
+.railNav {
+  display: grid;
+  gap: 8px;
+  margin-top: 34px;
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  min-height: 44px;
+  width: 100%;
+  padding: 0 12px;
+  border-radius: 8px;
+  color: #53615d;
+  background: transparent;
+}
+
+.navButton.isActive {
+  color: #17201d;
+  background: #e8f0ed;
+}
+
+.appMain {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  padding: 28px 32px 48px;
+}
+
+.topBar,
+.sectionHeader,
+.lessonHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.topBar {
+  margin-bottom: 22px;
+}
+
+.topBar h1,
+.sectionHeader h2,
+.dailyText h2,
+.progressBand h2,
+.progressOverview h2,
+.onboardingContent h1,
+.lessonStep h1,
+.safetyPanel h1 {
+  margin: 0;
+  letter-spacing: 0;
+}
+
+.topBar h1 {
+  font-size: 28px;
+  line-height: 1.15;
+}
+
+.topStats {
+  display: flex;
+  gap: 8px;
+}
+
+.topStats span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 58px;
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid #dce6e2;
+  border-radius: 8px;
+  background: #ffffff;
+  font-weight: 750;
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: #65726e;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.leadText {
+  margin: 10px 0 0;
+  color: #53615d;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.viewStack {
+  display: grid;
+  gap: 20px;
+}
+
+.dailyBand,
+.progressBand,
+.progressOverview {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  min-height: 178px;
+  padding: 24px;
+  border: 1px solid color-mix(in srgb, var(--accent) 24%, #dce6e2);
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--tint), #ffffff 66%);
+}
+
+.lessonBadge,
+.skillIcon,
+.safetyIcon {
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  color: var(--accent);
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 28%, transparent);
+}
+
+.lessonBadge {
+  width: 60px;
+  height: 60px;
+}
+
+.dailyText h2,
+.progressBand h2,
+.progressOverview h2 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.dailyText p:last-child,
+.progressOverview p {
+  max-width: 620px;
+  margin: 8px 0 0;
+  color: #53615d;
+  line-height: 1.55;
+}
+
+.primaryButton,
+.secondaryButton,
+.iconTextButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 8px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.primaryButton {
+  color: #ffffff;
+  background: #17201d;
+}
+
+.secondaryButton,
+.iconTextButton {
+  color: #17201d;
+  border: 1px solid #d7e1dd;
+  background: #ffffff;
+}
+
+.compactButton {
+  width: 100%;
+  margin-top: auto;
+}
+
+.routeGrid,
+.skillMapGrid,
+.badgeGrid {
+  display: grid;
+  gap: 14px;
+}
+
+.routeGrid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.skillCard,
+.mapCard,
+.badgeCard,
+.checkInCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 248px;
+  padding: 16px;
+  border: 1px solid #dce6e2;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.skillCard {
+  border-color: color-mix(in srgb, var(--accent) 22%, #dce6e2);
+}
+
+.skillCardTop,
+.mapCardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.skillOrder {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  color: var(--accent);
+  background: var(--tint);
+  font-weight: 850;
+}
+
+.skillIcon {
+  width: 40px;
+  height: 40px;
+  color: var(--accent);
+  background: var(--tint);
+}
+
+.skillCard h3,
+.mapCard h3,
+.badgeCard strong,
+.checkInCard strong {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.skillCard p,
+.mapCard p,
+.emptyText {
+  margin: 0;
+  color: #53615d;
+  line-height: 1.5;
+}
+
+.miniProgress {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.miniProgress span,
+.lessonProgress span {
+  height: 8px;
+  border-radius: 999px;
+  background: #e1e8e5;
+}
+
+.miniProgress span.isDone,
+.lessonProgress span.isDone,
+.wideProgress span,
+.scoreMeter span {
+  background: var(--accent);
+}
+
+.progressBand {
+  grid-template-columns: minmax(0, 280px) minmax(0, 1fr);
+  min-height: 128px;
+  background: #ffffff;
+  --accent: #227c72;
+}
+
+.wideProgress,
+.scoreMeter {
+  overflow: hidden;
+  height: 12px;
+  border-radius: 999px;
+  background: #e1e8e5;
+}
+
+.wideProgress span,
+.scoreMeter span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.skillMapGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mapCard {
+  min-height: 338px;
+}
+
+.mapCard.isRecommended {
+  border-color: color-mix(in srgb, var(--accent) 36%, #dce6e2);
+  box-shadow: inset 0 4px 0 var(--accent);
+}
+
+.mapScore {
+  display: inline-flex;
+  min-width: 42px;
+  min-height: 32px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  color: var(--accent);
+  background: var(--tint);
+  font-weight: 850;
+}
+
+.lessonList {
+  display: grid;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.lessonPill {
+  display: flex;
+  min-height: 40px;
+  align-items: center;
+  gap: 8px;
+  padding: 0 10px;
+  border: 1px solid #dce6e2;
+  border-radius: 8px;
+  color: #53615d;
+  background: #ffffff;
+  text-align: left;
+}
+
+.lessonPill.isDone {
+  color: #17201d;
+  border-color: color-mix(in srgb, var(--accent) 32%, #dce6e2);
+  background: var(--tint);
+}
+
+.profileSummary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+  gap: 20px;
+  padding: 22px;
+  border: 1px solid #dce6e2;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.compactSummary {
+  grid-template-columns: 1fr;
+  padding: 0;
+  border: 0;
+}
+
+.profileSummary h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.profileSummary p {
+  margin: 0;
+  color: #53615d;
+  line-height: 1.55;
+}
+
+.summaryColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.summaryColumns div {
+  display: grid;
+  gap: 8px;
+  min-height: 128px;
+  align-content: start;
+  padding: 16px;
+  border-radius: 8px;
+  color: #17201d;
+  background: var(--tint);
+}
+
+.summaryColumns svg {
+  color: var(--accent);
+}
+
+.summaryColumns span {
+  color: #53615d;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.scoreGrid,
+.progressSkillList,
+.checkInList {
+  display: grid;
+  gap: 10px;
+}
+
+.scoreRow,
+.progressSkillRow {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) minmax(160px, 1fr) 44px;
+  align-items: center;
+  gap: 14px;
+  min-height: 68px;
+  padding: 12px 14px;
+  border: 1px solid #dce6e2;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.scoreRow span {
+  display: block;
+  margin-top: 4px;
+  color: #65726e;
+  font-size: 13px;
+}
+
+.scoreRow b,
+.progressSkillRow b {
+  color: var(--accent);
+  text-align: right;
+}
+
+.resetButton {
+  justify-self: start;
+}
+
+.progressOverview {
+  grid-template-columns: minmax(0, 1fr) auto;
+  background: #ffffff;
+}
+
+.progressNumber {
+  display: grid;
+  place-items: center;
+  width: 112px;
+  height: 112px;
+  border-radius: 8px;
+  color: #227c72;
+  background: #dff3ef;
+}
+
+.progressNumber strong {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.progressNumber span {
+  color: #53615d;
+  font-size: 13px;
+  font-weight: 750;
+}
+
+.badgeGrid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.badgeCard {
+  min-height: 138px;
+  color: #7b8582;
+}
+
+.badgeCard.isActive {
+  color: #17201d;
+  border-color: #f0c24c;
+  background: #fff7dc;
+}
+
+.badgeCard span,
+.checkInCard span,
+.checkInCard small {
+  color: #65726e;
+}
+
+.checkInCard {
+  min-height: 132px;
+}
+
+.checkInCard p {
+  margin: 0;
+  color: #17201d;
+  line-height: 1.5;
+}
+
+.bottomNav {
+  display: none;
+}
+
+.onboardingShell,
+.lessonShell,
+.safetyShell {
+  min-height: 100vh;
+  padding: 28px;
+  background: #f4f7f6;
+}
+
+.onboardingPanel,
+.lessonPanel,
+.safetyPanel {
+  width: min(100%, 920px);
+  margin: 0 auto;
+  border: 1px solid #dce6e2;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.onboardingPanel {
+  min-height: calc(100vh - 56px);
+  padding: 24px;
+}
+
+.onboardingBrand {
+  margin-bottom: 34px;
+}
+
+.onboardingContent {
+  display: grid;
+  gap: 20px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.onboardingContent h1,
+.lessonStep h1,
+.safetyPanel h1 {
+  font-size: 34px;
+  line-height: 1.12;
+}
+
+.concernGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.concernCard {
+  display: grid;
+  gap: 8px;
+  min-height: 126px;
+  align-content: start;
+  padding: 16px;
+  border: 1px solid #dce6e2;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #17201d;
+  text-align: left;
+}
+
+.concernCard span {
+  font-size: 17px;
+  font-weight: 850;
+}
+
+.concernCard small {
+  color: #53615d;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.concernCard.isSelected {
+  border-color: #227c72;
+  background: #dff3ef;
+}
+
+.concernCard.isCrisis {
+  border-color: #e7b5b5;
+}
+
+.questionList {
+  display: grid;
+  gap: 10px;
+}
+
+.questionRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 14px;
+  align-items: center;
+  min-height: 86px;
+  padding: 14px;
+  border: 1px solid #dce6e2;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.questionRow.safetyQuestion {
+  border-color: #e9c4c4;
+  background: #fff7f7;
+}
+
+.scaleLabels {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 320px;
+  margin-top: 8px;
+  color: #65726e;
+  font-size: 12px;
+}
+
+.scaleButtons {
+  display: grid;
+  grid-template-columns: repeat(5, 36px);
+  gap: 6px;
+}
+
+.scaleButtons button {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  color: #53615d;
+  background: #edf2f0;
+  font-weight: 800;
+}
+
+.scaleButtons button.isPicked {
+  color: #ffffff;
+  background: #17201d;
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.safetyInline {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  border: 1px solid #e9c4c4;
+  border-radius: 8px;
+  color: #8a1f2d;
+  background: #fff7f7;
+}
+
+.safetyInline p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.safetyShell {
+  display: grid;
+  place-items: center;
+}
+
+.safetyPanel {
+  display: grid;
+  gap: 16px;
+  max-width: 680px;
+  padding: 28px;
+}
+
+.safetyIcon {
+  width: 58px;
+  height: 58px;
+  color: #8a1f2d;
+  background: #fff0f0;
+  box-shadow: none;
+}
+
+.safetyPanel p {
+  margin: 0;
+  color: #53615d;
+  line-height: 1.6;
+}
+
+.lessonShell {
+  display: grid;
+  place-items: center;
+}
+
+.lessonPanel {
+  min-height: 660px;
+  max-width: 760px;
+  padding: 22px;
+}
+
+.iconButton {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid #dce6e2;
+  border-radius: 8px;
+  color: #17201d;
+  background: #ffffff;
+}
+
+.lessonProgress {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(34px, 1fr));
+  gap: 8px;
+  width: min(100%, 360px);
+  --accent: #227c72;
+}
+
+.lessonStep {
+  display: grid;
+  gap: 20px;
+  max-width: 620px;
+  margin: 46px auto 0;
+}
+
+.exampleBox,
+.feedbackBox {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 8px;
+  line-height: 1.55;
+}
+
+.exampleBox {
+  color: #17201d;
+  background: var(--tint);
+}
+
+.feedbackBox {
+  color: #1d5b32;
+  background: #e6f4ea;
+}
+
+.choiceList {
+  display: grid;
+  gap: 10px;
+}
+
+.choiceList button {
+  min-height: 62px;
+  padding: 14px 16px;
+  border: 1px solid #dce6e2;
+  border-radius: 8px;
+  color: #17201d;
+  background: #ffffff;
+  text-align: left;
+  line-height: 1.45;
+}
+
+.choiceList button.isPicked {
+  border-color: var(--accent);
+  background: var(--tint);
+}
+
+textarea {
+  width: 100%;
+  min-height: 144px;
+  resize: vertical;
+  padding: 14px;
+  border: 1px solid #cfdad6;
+  border-radius: 8px;
+  color: #17201d;
+  background: #ffffff;
+  line-height: 1.5;
+}
+
+textarea:focus,
+button:focus-visible {
+  outline: 3px solid rgba(34, 124, 114, 0.22);
+  outline-offset: 2px;
+}
+
+@media (max-width: 1040px) {
+  .appShell {
+    grid-template-columns: 1fr;
+  }
+
+  .sideRail {
+    display: none;
+  }
+
+  .appMain {
+    padding: 22px 18px 92px;
+  }
+
+  .bottomNav {
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    padding: 8px;
+    border: 1px solid #dce6e2;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 12px 34px rgba(36, 51, 47, 0.16);
+  }
+
+  .bottomNav .navButton {
+    display: grid;
+    justify-items: center;
+    gap: 4px;
+    min-height: 54px;
+    padding: 4px;
+    font-size: 12px;
+  }
+
+  .routeGrid,
+  .skillMapGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .topBar {
+    align-items: flex-start;
+  }
+
+  .topBar h1 {
+    font-size: 24px;
+  }
+
+  .topStats {
+    flex-direction: column;
+  }
+
+  .dailyBand,
+  .progressBand,
+  .progressOverview,
+  .profileSummary,
+  .questionRow,
+  .scoreRow,
+  .progressSkillRow {
+    grid-template-columns: 1fr;
+  }
+
+  .dailyBand,
+  .progressBand,
+  .progressOverview {
+    min-height: unset;
+    padding: 18px;
+  }
+
+  .routeGrid,
+  .skillMapGrid,
+  .badgeGrid,
+  .concernGrid,
+  .summaryColumns {
+    grid-template-columns: 1fr;
+  }
+
+  .skillCard,
+  .mapCard {
+    min-height: unset;
+  }
+
+  .onboardingShell,
+  .lessonShell,
+  .safetyShell {
+    padding: 12px;
+  }
+
+  .onboardingPanel,
+  .lessonPanel,
+  .safetyPanel {
+    min-height: calc(100vh - 24px);
+    padding: 18px;
+  }
+
+  .onboardingContent h1,
+  .lessonStep h1,
+  .safetyPanel h1 {
+    font-size: 27px;
+  }
+
+  .questionRow {
+    align-items: stretch;
+  }
+
+  .scaleButtons {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .scaleButtons button {
+    width: 100%;
+  }
+
+  .lessonStep {
+    margin-top: 30px;
+  }
+
+  .primaryButton,
+  .secondaryButton,
+  .iconTextButton {
+    width: 100%;
+  }
+
+  .buttonRow .secondaryButton,
+  .buttonRow .primaryButton {
+    flex: 1 1 220px;
+  }
+}
+
+@media (max-width: 420px) {
+  .appMain {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .bottomNav {
+    right: 8px;
+    left: 8px;
+  }
+
+  .bottomNav .navButton span {
+    font-size: 11px;
+  }
+
+  .topStats span {
+    min-width: 50px;
+  }
+}
